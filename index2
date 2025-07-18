@@ -136,17 +136,17 @@
 
   <!-- Song Page -->
   <div id="song" class="centered" style="display: none;">
-  <a class="button back-button" href="#main">← Back</a>
-  <h2>What Song Reminds Me of You</h2>
-  <p>Apocalypse – Cigarettes After Sex</p>
+    <a class="button back-button" href="#main">← Back</a>
+    <h2>What Song Reminds Me of You</h2>
+    <p>Apocalypse – Cigarettes After Sex</p>
 
-  <form action="https://formspree.io/f/myzpzdpn" method="POST">
-    <textarea name="message" placeholder="Type what song reminds you of me..." required></textarea><br>
-    <button type="submit" class="button">Send</button>
-  </form>
+    <form action="https://formspree.io/f/myzpzdpn" method="POST">
+      <textarea name="message" placeholder="Type what song reminds you of me..." required></textarea><br>
+      <button type="submit" class="button">Send</button>
+    </form>
 
-  <p style="margin-top:10px; font-size:0.9rem;">It'll reach me directly 💌</p>
-</div> 
+    <p style="margin-top:10px; font-size:0.9rem;">It'll reach me directly 💌</p>
+  </div> 
 
   <!-- Unlock Memory -->
   <div id="memory" class="centered" style="display: none;">
@@ -204,11 +204,6 @@
       }
     }
 
-    function sendSong() {
-      const message = document.getElementById('songInput').value;
-      alert('Your message has been sent: ' + message);
-    }
-
     function rollDice() {
       const messages = [
         "You rolled a 1... Azgul bnda 😅",
@@ -221,8 +216,8 @@
       document.getElementById('diceResult').textContent = messages[Math.floor(Math.random() * messages.length)];
     }
 
-    // Spotify (You must replace with real access token)
-    const accessToken = '1POdFZRZbvb...qqillRxMr2z';
+    // Spotify (Replace with your real Spotify access token)
+    const accessToken = 'YOUR_REAL_SPOTIFY_ACCESS_TOKEN_HERE';
 
     async function fetchNowPlaying() {
       const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
